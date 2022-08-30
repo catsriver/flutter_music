@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../bodcast/bodcast_screen.dart';
 import '../community/community_screen.dart';
@@ -55,22 +56,22 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: FaIcon(FontAwesomeIcons.compactDisc),
               label: '发现',
               tooltip: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: FaIcon(FontAwesomeIcons.radio),
               label: '播客',
               tooltip: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: FaIcon(FontAwesomeIcons.bomb),
               label: '云村',
               tooltip: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: FaIcon(FontAwesomeIcons.music),
               label: '我的',
               tooltip: '',
             ),
