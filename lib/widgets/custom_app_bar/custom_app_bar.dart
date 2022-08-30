@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_music/util/keys.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -19,7 +20,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: leading ??
           IconButton(
             icon: const FaIcon(FontAwesomeIcons.bars),
-            onPressed: () {},
+            onPressed: () {
+              homeScaffoldKey.currentState!.openDrawer();
+            },
           ),
       titleSpacing: 0,
       title: middle,
