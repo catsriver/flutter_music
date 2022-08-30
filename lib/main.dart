@@ -30,6 +30,7 @@ class App extends StatelessWidget {
             ),
             bottomNavigationBarTheme: BottomNavigationBarThemeData(
               elevation: 0,
+              backgroundColor: Colours.mainBgColor,
               selectedItemColor: Colours.accentColor,
               unselectedItemColor: Colours.fontColor3,
               selectedLabelStyle: TextStyle(
