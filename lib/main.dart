@@ -42,6 +42,10 @@ class App extends StatelessWidget {
               type: BottomNavigationBarType.fixed,
             ),
             scaffoldBackgroundColor: Colours.secondaryBgColor,
+
+            // 去除水波纹
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
           ),
           home: const HomeScreen(),
         );
