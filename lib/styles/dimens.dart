@@ -13,6 +13,8 @@ class Dimens {
   static final fontSp26 = 26.sp;
   static final fontSp28 = 28.sp;
   // 间距
+  static final gapWDp5 = 5.w;
+
   static final gapWDp14 = 14.w;
   static final gapHDp14 = 14.h;
 

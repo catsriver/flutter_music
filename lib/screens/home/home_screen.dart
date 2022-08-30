@@ -41,42 +41,36 @@ class _HomeScreenState extends State<HomeScreen> {
           UserScreen(),
         ],
       ),
-      bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-        ),
-        child: BottomNavigationBar(
-          currentIndex: _currentIndex,
-          onTap: (int index) {
-            setState(() {
-              _currentIndex = index;
-            });
-            _controller.jumpToPage(index);
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.compactDisc),
-              label: '发现',
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.radio),
-              label: '播客',
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.bomb),
-              label: '云村',
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.music),
-              label: '我的',
-              tooltip: '',
-            ),
-          ],
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+          });
+          _controller.jumpToPage(index);
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.compactDisc),
+            label: '发现',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.radio),
+            label: '播客',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.bomb),
+            label: '云村',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.music),
+            label: '我的',
+            tooltip: '',
+          ),
+        ],
       ),
     );
   }
