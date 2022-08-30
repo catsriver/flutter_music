@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import './styles/styles.dart';
+import './screens/home/home_screen.dart';
 
 void main() {
   runApp(const App());
@@ -29,6 +30,7 @@ class App extends StatelessWidget {
             ),
             bottomNavigationBarTheme: BottomNavigationBarThemeData(
               elevation: 0,
+              backgroundColor: Colours.mainBgColor,
               selectedItemColor: Colours.accentColor,
               unselectedItemColor: Colours.fontColor3,
               selectedLabelStyle: TextStyle(
@@ -37,14 +39,11 @@ class App extends StatelessWidget {
               unselectedLabelStyle: TextStyle(
                 fontSize: Dimens.fontSp14,
               ),
+              type: BottomNavigationBarType.fixed,
             ),
             scaffoldBackgroundColor: Colours.secondaryBgColor,
           ),
-          home: Scaffold(
-            appBar: AppBar(
-              title: const Text('网易云音乐'),
-            ),
-          ),
+          home: const HomeScreen(),
         );
       },
     );
