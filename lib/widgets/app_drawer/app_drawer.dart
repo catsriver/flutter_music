@@ -174,6 +174,7 @@ class AppDrawer extends StatelessWidget {
                       label: '云贝中心',
                       icon: SvgIcons.archor,
                       bottom: true,
+                      desc: '签到',
                       press: () {},
                     ),
                     ListItem(
@@ -209,6 +210,9 @@ class AppDrawer extends StatelessWidget {
                     ListItem(
                       label: 'Beat交易平台',
                       icon: SvgIcons.activity,
+                      desc: '本周精选本周精选',
+                      imgUrl:
+                          'https://c-ssl.dtstatic.com/uploads/item/201304/24/20130424222243_jrBCs.thumb.400_0.jpeg_webp',
                       press: () {},
                     ),
                     ListItem(
