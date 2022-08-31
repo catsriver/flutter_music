@@ -8,6 +8,7 @@ class Colours {
   static const mainBgColor = Color(0xFFFFFFFF);
   static const secondaryBgColor = Color(0xFFF6F6F6);
   static const thirdlyBgColor = Color(0xFFF5F5F5);
+  static const buttonHLColor = Color(0xFFD2D2D2);
 
   // 字体
   static const fontColor1 = Color(0xFF252933);

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../util/keys.dart';
+import '../../widgets/app_drawer/app_drawer.dart';
 import '../bodcast/bodcast_screen.dart';
 import '../community/community_screen.dart';
 import '../search/search_screen.dart';
@@ -22,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: homeScaffoldKey,
       body: PageView(
         controller: _controller,
         onPageChanged: (int index) {
@@ -72,6 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+      drawer: const AppDrawer(),
     );
   }
 }
