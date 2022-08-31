@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_music/widgets/common/svg_icon.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -14,7 +15,7 @@ class ListItem extends StatelessWidget {
 
   final bool? bottom;
   final String label;
-  final IconData icon;
+  final SvgIconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class ListItem extends StatelessWidget {
           // leading
           Row(
             children: [
-              FaIcon(icon),
+              SvgIcon(icon: icon),
               SizedBox(width: Dimens.gapWDp14),
               Text(
                 label,

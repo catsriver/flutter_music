@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_music/widgets/app_drawer/widgets/list_item.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../styles/styles.dart';
+import '../common/svg_icon.dart';
 import './widgets/header.dart';
 import './widgets/body.dart';
 import './widgets/list_container.dart';
@@ -27,7 +27,9 @@ class AppDrawer extends StatelessWidget {
               avatarUrl:
                   'https://c-ssl.dtstatic.com/uploads/blog/202208/31/20220831190228_48d1c.thumb.400_0.jpg',
               onLeadingPress: () {},
-              onTrailingPress: () {},
+              onTrailingPress: () {
+                print('点击扫一扫');
+              },
             ),
             Body(
               children: [
@@ -162,17 +164,17 @@ class AppDrawer extends StatelessWidget {
                   children: const [
                     ListItem(
                       label: '我的消息',
-                      icon: FontAwesomeIcons.envelope,
+                      icon: SvgIcons.mail,
                       bottom: true,
                     ),
                     ListItem(
                       label: '云贝中心',
-                      icon: FontAwesomeIcons.yenSign,
+                      icon: SvgIcons.archor,
                       bottom: true,
                     ),
                     ListItem(
                       label: '创作者中心',
-                      icon: FontAwesomeIcons.lightbulb,
+                      icon: SvgIcons.bulb,
                     ),
                   ],
                 ),
@@ -183,27 +185,27 @@ class AppDrawer extends StatelessWidget {
                   children: const [
                     ListItem(
                       label: '云村有票',
-                      icon: FontAwesomeIcons.ticketSimple,
+                      icon: SvgIcons.bookmarks,
                     ),
                     ListItem(
                       label: '商城',
-                      icon: FontAwesomeIcons.cartShopping,
+                      icon: SvgIcons.shoppingCart,
                     ),
                     ListItem(
                       label: '多多西西口袋',
-                      icon: FontAwesomeIcons.ghost,
+                      icon: SvgIcons.ghost,
                     ),
                     ListItem(
                       label: 'Beat交易平台',
-                      icon: FontAwesomeIcons.waveSquare,
+                      icon: SvgIcons.activity,
                     ),
                     ListItem(
                       label: '游戏专区',
-                      icon: FontAwesomeIcons.gamepad,
+                      icon: SvgIcons.brandDiscord,
                     ),
                     ListItem(
                       label: '口袋彩铃',
-                      icon: FontAwesomeIcons.bell,
+                      icon: SvgIcons.bellRinging2,
                     ),
                   ],
                 ),
@@ -214,39 +216,39 @@ class AppDrawer extends StatelessWidget {
                   children: const [
                     ListItem(
                       label: '设置',
-                      icon: FontAwesomeIcons.gear,
+                      icon: SvgIcons.settings,
                     ),
                     ListItem(
                       label: '深色模式',
-                      icon: FontAwesomeIcons.moon,
+                      icon: SvgIcons.moon,
                     ),
                     ListItem(
                       label: '定时关闭',
-                      icon: FontAwesomeIcons.clock,
+                      icon: SvgIcons.clock,
                     ),
                     ListItem(
                       label: '个性装扮',
-                      icon: FontAwesomeIcons.shirt,
+                      icon: SvgIcons.shirt,
                     ),
                     ListItem(
                       label: '边听边存',
-                      icon: FontAwesomeIcons.headphones,
+                      icon: SvgIcons.headphones,
                     ),
                     ListItem(
                       label: '在线听歌免流量',
-                      icon: FontAwesomeIcons.chartLine,
+                      icon: SvgIcons.deviceDesktopAnalytics,
                     ),
                     ListItem(
                       label: '音乐黑名单',
-                      icon: FontAwesomeIcons.ban,
+                      icon: SvgIcons.ban,
                     ),
                     ListItem(
                       label: '青少年模式',
-                      icon: FontAwesomeIcons.shield,
+                      icon: SvgIcons.shieldCheck,
                     ),
                     ListItem(
                       label: '音乐闹钟',
-                      icon: Icons.alarm,
+                      icon: SvgIcons.alarm,
                     ),
                   ],
                 ),
@@ -256,35 +258,35 @@ class AppDrawer extends StatelessWidget {
                   children: const [
                     ListItem(
                       label: '我的订单',
-                      icon: FontAwesomeIcons.receipt,
+                      icon: SvgIcons.receipt,
                     ),
                     ListItem(
                       label: '优惠券',
-                      icon: FontAwesomeIcons.ticket,
+                      icon: SvgIcons.ticket,
                     ),
                     ListItem(
                       label: '我的客服',
-                      icon: FontAwesomeIcons.headset,
+                      icon: SvgIcons.headset,
                     ),
                     ListItem(
                       label: '分享网易云音乐',
-                      icon: Icons.share,
+                      icon: SvgIcons.share,
                     ),
                     ListItem(
                       label: '个人信息收集与使用清单',
-                      icon: Icons.nat,
+                      icon: SvgIcons.certificate,
                     ),
                     ListItem(
                       label: '个人信息第三方共享清单',
-                      icon: Icons.circle_outlined,
+                      icon: SvgIcons.brandUbuntu,
                     ),
                     ListItem(
                       label: '个人信息与隐私保护',
-                      icon: Icons.shield_moon_outlined,
+                      icon: SvgIcons.shieldLock,
                     ),
                     ListItem(
                       label: '关于',
-                      icon: Icons.info,
+                      icon: SvgIcons.alertCircle,
                     ),
                   ],
                 ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_music/widgets/common/svg_icon.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../styles/styles.dart';
 
@@ -46,18 +46,26 @@ class Header extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: Dimens.gapWDp5),
-                FaIcon(
-                  FontAwesomeIcons.angleRight,
-                  size: Dimens.fontSp18,
+                // FaIcon(
+                //   FontAwesomeIcons.angleRight,
+                //   size: Dimens.fontSp18,
+                // ),
+                SvgIcon(
+                  icon: SvgIcons.chevronRight,
+                  size: 18.w,
                 ),
               ],
             ),
           ),
-          IconButton(
-            padding: const EdgeInsets.all(0),
-            alignment: Alignment.centerRight,
-            icon: const FaIcon(FontAwesomeIcons.camera),
-            onPressed: onTrailingPress,
+          // IconButton(
+          //   padding: const EdgeInsets.all(0),
+          //   alignment: Alignment.centerRight,
+          //   icon: const FaIcon(FontAwesomeIcons.camera),
+          //   onPressed: onTrailingPress,
+          // ),
+          GestureDetector(
+            onTap: onTrailingPress,
+            child: const SvgIcon(icon: SvgIcons.scan),
           ),
         ],
       ),
