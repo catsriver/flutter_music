@@ -3,6 +3,7 @@ import 'package:flutter_music/widgets/app_drawer/widgets/list_item.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../styles/styles.dart';
+import '../common/rounded_text_button.dart';
 import '../common/svg_icon.dart';
 import './widgets/header.dart';
 import './widgets/body.dart';
@@ -315,6 +316,14 @@ class AppDrawer extends StatelessWidget {
                       press: () {},
                     ),
                   ],
+                ),
+
+                // 退出登陆/关闭
+                RoundedTextButton(
+                  text: '退出登陆/关闭',
+                  press: () {
+                    print('退出登陆/关闭');
+                  },
                 ),
               ],
             ),
