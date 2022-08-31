@@ -86,70 +86,68 @@ class _ListItemState extends State<ListItem> {
 
                     // middle
                     Expanded(
-                      child: Container(
-                        color: Colors.grey,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            // 标记
-                            if (widget.baged != null && widget.baged! > 0)
-                              Container(
-                                width: 22.w,
-                                height: 22.w,
-                                decoration: BoxDecoration(
-                                  color: Colours.accentColor,
-                                  borderRadius: BorderRadius.circular(22.w),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          // 标记
+                          if (widget.baged != null && widget.baged! > 0)
+                            Container(
+                              width: 22.w,
+                              height: 22.w,
+                              decoration: BoxDecoration(
+                                color: Colours.accentColor,
+                                borderRadius: BorderRadius.circular(22.w),
+                              ),
+                              alignment: Alignment.center,
+                              child: Text(
+                                '${widget.baged}',
+                                style: TextStyle(
+                                  fontSize: Dimens.fontSp14,
+                                  color: Colours.mainBgColor,
                                 ),
-                                alignment: Alignment.center,
+                              ),
+                            ),
+
+                          // 描述
+                          if (widget.desc != null && widget.desc != '')
+                            Expanded(
+                              child: Align(
+                                alignment: Alignment.centerRight,
                                 child: Text(
-                                  '${widget.baged}',
+                                  widget.desc!,
                                   style: TextStyle(
-                                    fontSize: Dimens.fontSp14,
-                                    color: Colours.mainBgColor,
+                                    fontSize: Dimens.fontSp16,
+                                    color: Colours.fontColor2,
                                   ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
+                            ),
 
-                            // 描述
-                            if (widget.desc != null && widget.desc != '')
-                              Expanded(
-                                child: Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Text(
-                                    widget.desc!,
-                                    style: TextStyle(
-                                      fontSize: Dimens.fontSp16,
-                                      color: Colours.fontColor2,
-                                    ),
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
+                          // 图片
+                          if (widget.imgUrl != null && widget.imgUrl != '')
+                            Container(
+                              width: 35.w,
+                              height: 35.h,
+                              margin: EdgeInsets.only(left: Dimens.gapWDp14),
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage(widget.imgUrl!),
                               ),
+                            ),
 
-                            // 图片
-                            if (widget.imgUrl != null && widget.imgUrl != '')
-                              Container(
-                                width: 35.w,
-                                height: 35.h,
-                                margin: EdgeInsets.symmetric(
-                                    horizontal: Dimens.gapWDp14),
-                                child: CircleAvatar(
-                                  backgroundImage: NetworkImage(widget.imgUrl!),
-                                ),
-                              ),
-
-                            // 开关
-                            if (widget.kswitch)
-                              Switch(
-                                activeColor: const Color(0xFFF93B38),
-                                value: _switchValue,
-                                onChanged: _onSwitchChanged,
-                              ),
-                          ],
-                        ),
+                          // 开关
+                          if (widget.kswitch)
+                            Switch(
+                              activeColor: const Color(0xFFF93B38),
+                              value: _switchValue,
+                              onChanged: _onSwitchChanged,
+                            ),
+                        ],
                       ),
                     ),
+
+                    SizedBox(width: Dimens.gapWDp14),
 
                     // trailing
                     if (widget.trailing)
