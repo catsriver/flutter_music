@@ -13,6 +13,7 @@ class ListItem extends StatefulWidget {
     required this.press,
     this.trailing = true,
     this.kswitch = false,
+    this.imgUrl,
     Key? key,
   }) : super(key: key);
 
@@ -22,6 +23,7 @@ class ListItem extends StatefulWidget {
   final VoidCallback press;
   final bool trailing;
   final bool kswitch;
+  final String? imgUrl;
 
   @override
   State<ListItem> createState() => _ListItemState();
@@ -85,6 +87,19 @@ class _ListItemState extends State<ListItem> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
+                            // 图片
+                            if (widget.imgUrl != null && widget.imgUrl != '')
+                              Container(
+                                width: 35.w,
+                                height: 35.h,
+                                margin: EdgeInsets.symmetric(
+                                    horizontal: Dimens.gapWDp14),
+                                child: CircleAvatar(
+                                  backgroundImage: NetworkImage(widget.imgUrl!),
+                                ),
+                              ),
+
+                            // 开关
                             if (widget.kswitch)
                               Switch(
                                 activeColor: const Color(0xFFF93B38),

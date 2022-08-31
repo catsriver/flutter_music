@@ -215,6 +215,8 @@ class AppDrawer extends StatelessWidget {
                     ListItem(
                       label: '口袋彩铃',
                       icon: SvgIcons.bellRinging2,
+                      imgUrl:
+                          'https://c-ssl.dtstatic.com/uploads/item/201304/24/20130424222243_jrBCs.thumb.400_0.jpeg_webp',
                       press: () {},
                     ),
                   ],
@@ -229,6 +231,8 @@ class AppDrawer extends StatelessWidget {
                       icon: SvgIcons.settings,
                       trailing: false,
                       kswitch: true,
+                      imgUrl:
+                          'https://c-ssl.dtstatic.com/uploads/item/201304/24/20130424222243_jrBCs.thumb.400_0.jpeg_webp',
                       press: () {},
                     ),
                     ListItem(
