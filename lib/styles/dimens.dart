@@ -21,6 +21,8 @@ class Dimens {
   static final gapWDp24 = 24.w;
   static final gapHDp24 = 24.h;
 
+  static final gapWDp30 = 30.w;
+
   // 圆角
   static final radiusH24 = 24.h;
 }
