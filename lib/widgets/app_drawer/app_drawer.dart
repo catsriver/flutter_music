@@ -227,6 +227,7 @@ class AppDrawer extends StatelessWidget {
                     ListItem(
                       label: '设置',
                       icon: SvgIcons.settings,
+                      trailing: false,
                       press: () {},
                     ),
                     ListItem(

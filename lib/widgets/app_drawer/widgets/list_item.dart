@@ -11,6 +11,7 @@ class ListItem extends StatelessWidget {
     required this.label,
     required this.icon,
     required this.press,
+    this.trailing = true,
     Key? key,
   }) : super(key: key);
 
@@ -18,6 +19,7 @@ class ListItem extends StatelessWidget {
   final String label;
   final SvgIconData icon;
   final VoidCallback press;
+  final bool? trailing;
 
   @override
   Widget build(BuildContext context) {
@@ -67,11 +69,12 @@ class ListItem extends StatelessWidget {
                     ),
 
                     // trailing
-                    FaIcon(
-                      FontAwesomeIcons.angleRight,
-                      color: Colours.fontColor3,
-                      size: Dimens.fontSp20,
-                    ),
+                    if (trailing != null && trailing == true)
+                      FaIcon(
+                        FontAwesomeIcons.angleRight,
+                        color: Colours.fontColor3,
+                        size: Dimens.fontSp20,
+                      ),
 
                     SizedBox(width: Dimens.gapWDp24),
                   ],
