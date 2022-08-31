@@ -195,6 +195,9 @@ class AppDrawer extends StatelessWidget {
                     ListItem(
                       label: '商城',
                       icon: SvgIcons.shoppingCart,
+                      desc: '潮牌真无限耳机限时3折抢',
+                      imgUrl:
+                          'https://c-ssl.dtstatic.com/uploads/item/201304/24/20130424222243_jrBCs.thumb.400_0.jpeg_webp',
                       press: () {},
                     ),
                     ListItem(
@@ -215,6 +218,7 @@ class AppDrawer extends StatelessWidget {
                     ListItem(
                       label: '口袋彩铃',
                       icon: SvgIcons.bellRinging2,
+                      desc: '慵懒爵士铃声超级好听',
                       imgUrl:
                           'https://c-ssl.dtstatic.com/uploads/item/201304/24/20130424222243_jrBCs.thumb.400_0.jpeg_webp',
                       press: () {},

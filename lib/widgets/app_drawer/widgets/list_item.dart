@@ -14,6 +14,7 @@ class ListItem extends StatefulWidget {
     this.trailing = true,
     this.kswitch = false,
     this.imgUrl,
+    this.desc,
     Key? key,
   }) : super(key: key);
 
@@ -24,6 +25,7 @@ class ListItem extends StatefulWidget {
   final bool trailing;
   final bool kswitch;
   final String? imgUrl;
+  final String? desc;
 
   @override
   State<ListItem> createState() => _ListItemState();
@@ -87,6 +89,20 @@ class _ListItemState extends State<ListItem> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
+                            // 描述
+                            if (widget.desc != null && widget.desc != '')
+                              Expanded(
+                                child: Text(
+                                  widget.desc!,
+                                  style: TextStyle(
+                                    fontSize: Dimens.fontSp16,
+                                    color: Colours.fontColor2,
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+
                             // 图片
                             if (widget.imgUrl != null && widget.imgUrl != '')
                               Container(
