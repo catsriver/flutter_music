@@ -147,7 +147,7 @@ class _ListItemState extends State<ListItem> {
                       ),
                     ),
 
-                    SizedBox(width: Dimens.gapWDp14),
+                    if (!widget.kswitch) SizedBox(width: Dimens.gapWDp14),
 
                     // trailing
                     if (widget.trailing)
