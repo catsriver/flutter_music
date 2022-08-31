@@ -23,6 +23,7 @@ class ListContainer extends StatelessWidget {
         color: Colours.mainBgColor,
         borderRadius: BorderRadius.circular(Dimens.radiusH24 / 2),
       ),
+      clipBehavior: Clip.hardEdge,
       child: Column(
         children: [
           if (headerTitle != null && headerTitle != '')
@@ -46,11 +47,8 @@ class ListContainer extends StatelessWidget {
                 ),
               ),
             ),
-          Padding(
-            padding: EdgeInsets.only(left: Dimens.gapWDp24),
-            child: Column(
-              children: children,
-            ),
+          Column(
+            children: children,
           ),
         ],
       ),

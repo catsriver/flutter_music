@@ -161,20 +161,23 @@ class AppDrawer extends StatelessWidget {
 
                 // 快捷入口
                 ListContainer(
-                  children: const [
+                  children: [
                     ListItem(
                       label: '我的消息',
                       icon: SvgIcons.mail,
                       bottom: true,
+                      press: () {},
                     ),
                     ListItem(
                       label: '云贝中心',
                       icon: SvgIcons.archor,
                       bottom: true,
+                      press: () {},
                     ),
                     ListItem(
                       label: '创作者中心',
                       icon: SvgIcons.bulb,
+                      press: () {},
                     ),
                   ],
                 ),
@@ -182,30 +185,36 @@ class AppDrawer extends StatelessWidget {
                 // 音乐服务
                 ListContainer(
                   headerTitle: '音乐服务',
-                  children: const [
+                  children: [
                     ListItem(
                       label: '云村有票',
                       icon: SvgIcons.bookmarks,
+                      press: () {},
                     ),
                     ListItem(
                       label: '商城',
                       icon: SvgIcons.shoppingCart,
+                      press: () {},
                     ),
                     ListItem(
                       label: '多多西西口袋',
                       icon: SvgIcons.ghost,
+                      press: () {},
                     ),
                     ListItem(
                       label: 'Beat交易平台',
                       icon: SvgIcons.activity,
+                      press: () {},
                     ),
                     ListItem(
                       label: '游戏专区',
                       icon: SvgIcons.brandDiscord,
+                      press: () {},
                     ),
                     ListItem(
                       label: '口袋彩铃',
                       icon: SvgIcons.bellRinging2,
+                      press: () {},
                     ),
                   ],
                 ),
@@ -213,80 +222,97 @@ class AppDrawer extends StatelessWidget {
                 // 其他
                 ListContainer(
                   headerTitle: '其他',
-                  children: const [
+                  children: [
                     ListItem(
                       label: '设置',
                       icon: SvgIcons.settings,
+                      press: () {},
                     ),
                     ListItem(
                       label: '深色模式',
                       icon: SvgIcons.moon,
+                      press: () {},
                     ),
                     ListItem(
                       label: '定时关闭',
                       icon: SvgIcons.clock,
+                      press: () {},
                     ),
                     ListItem(
                       label: '个性装扮',
                       icon: SvgIcons.shirt,
+                      press: () {},
                     ),
                     ListItem(
                       label: '边听边存',
                       icon: SvgIcons.headphones,
+                      press: () {},
                     ),
                     ListItem(
                       label: '在线听歌免流量',
                       icon: SvgIcons.deviceDesktopAnalytics,
+                      press: () {},
                     ),
                     ListItem(
                       label: '音乐黑名单',
                       icon: SvgIcons.ban,
+                      press: () {},
                     ),
                     ListItem(
                       label: '青少年模式',
                       icon: SvgIcons.shieldCheck,
+                      press: () {},
                     ),
                     ListItem(
                       label: '音乐闹钟',
                       icon: SvgIcons.alarm,
+                      press: () {},
                     ),
                   ],
                 ),
 
                 // 用户相关
                 ListContainer(
-                  children: const [
+                  children: [
                     ListItem(
                       label: '我的订单',
                       icon: SvgIcons.receipt,
+                      press: () {},
                     ),
                     ListItem(
                       label: '优惠券',
                       icon: SvgIcons.ticket,
+                      press: () {},
                     ),
                     ListItem(
                       label: '我的客服',
                       icon: SvgIcons.headset,
+                      press: () {},
                     ),
                     ListItem(
                       label: '分享网易云音乐',
                       icon: SvgIcons.share,
+                      press: () {},
                     ),
                     ListItem(
                       label: '个人信息收集与使用清单',
                       icon: SvgIcons.certificate,
+                      press: () {},
                     ),
                     ListItem(
                       label: '个人信息第三方共享清单',
                       icon: SvgIcons.brandUbuntu,
+                      press: () {},
                     ),
                     ListItem(
                       label: '个人信息与隐私保护',
                       icon: SvgIcons.shieldLock,
+                      press: () {},
                     ),
                     ListItem(
                       label: '关于',
                       icon: SvgIcons.alertCircle,
+                      press: () {},
                     ),
                   ],
                 ),
