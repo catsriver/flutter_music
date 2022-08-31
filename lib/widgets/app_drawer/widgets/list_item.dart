@@ -92,14 +92,17 @@ class _ListItemState extends State<ListItem> {
                             // 描述
                             if (widget.desc != null && widget.desc != '')
                               Expanded(
-                                child: Text(
-                                  widget.desc!,
-                                  style: TextStyle(
-                                    fontSize: Dimens.fontSp16,
-                                    color: Colours.fontColor2,
+                                child: Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Text(
+                                    widget.desc!,
+                                    style: TextStyle(
+                                      fontSize: Dimens.fontSp16,
+                                      color: Colours.fontColor2,
+                                    ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
 

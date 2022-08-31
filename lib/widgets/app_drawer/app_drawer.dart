@@ -257,6 +257,7 @@ class AppDrawer extends StatelessWidget {
                     ListItem(
                       label: '边听边存',
                       icon: SvgIcons.headphones,
+                      desc: '未开启',
                       press: () {},
                     ),
                     ListItem(
@@ -272,6 +273,7 @@ class AppDrawer extends StatelessWidget {
                     ListItem(
                       label: '青少年模式',
                       icon: SvgIcons.shieldCheck,
+                      desc: '未开启',
                       press: () {},
                     ),
                     ListItem(
