@@ -167,6 +167,7 @@ class AppDrawer extends StatelessWidget {
                       label: '我的消息',
                       icon: SvgIcons.mail,
                       bottom: true,
+                      baged: 2,
                       press: () {},
                     ),
                     ListItem(

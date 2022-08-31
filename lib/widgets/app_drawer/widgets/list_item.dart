@@ -15,6 +15,7 @@ class ListItem extends StatefulWidget {
     this.kswitch = false,
     this.imgUrl,
     this.desc,
+    this.baged,
     Key? key,
   }) : super(key: key);
 
@@ -26,6 +27,7 @@ class ListItem extends StatefulWidget {
   final bool kswitch;
   final String? imgUrl;
   final String? desc;
+  final int? baged;
 
   @override
   State<ListItem> createState() => _ListItemState();
@@ -89,6 +91,25 @@ class _ListItemState extends State<ListItem> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
+                            // 标记
+                            if (widget.baged != null && widget.baged! > 0)
+                              Container(
+                                width: 22.w,
+                                height: 22.w,
+                                decoration: BoxDecoration(
+                                  color: Colours.accentColor,
+                                  borderRadius: BorderRadius.circular(22.w),
+                                ),
+                                alignment: Alignment.center,
+                                child: Text(
+                                  '${widget.baged}',
+                                  style: TextStyle(
+                                    fontSize: Dimens.fontSp14,
+                                    color: Colours.mainBgColor,
+                                  ),
+                                ),
+                              ),
+
                             // 描述
                             if (widget.desc != null && widget.desc != '')
                               Expanded(
