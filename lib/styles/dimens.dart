@@ -15,6 +15,9 @@ class Dimens {
   // 间距
   static final gapWDp5 = 5.w;
 
+  static final gapWDp10 = 10.w;
+  static final gapHDp10 = 10.h;
+
   static final gapWDp14 = 14.w;
   static final gapHDp14 = 14.h;
 
