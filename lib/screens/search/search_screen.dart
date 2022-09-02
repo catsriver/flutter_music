@@ -49,29 +49,38 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
             builder: (_, ref, __) {
               final banners = ref.watch(bannerProvider);
               return Container(
-                height: 190.h,
-                margin: EdgeInsets.symmetric(
-                    horizontal: Dimens.gapWDp24, vertical: Dimens.gapHDp24 / 2),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Dimens.radiusH24 / 2),
-                ),
-                clipBehavior: Clip.hardEdge,
-                child: Swiper(
-                  autoplay: true,
-                  pagination: SwiperPagination(
-                    margin: EdgeInsets.only(bottom: Dimens.gapHDp10),
-                    builder: DotSwiperPaginationBuilder(
-                      size: 10.h,
-                      activeSize: 10.h,
-                      color: const Color(0xFFCCCCCC),
-                      activeColor: const Color(0xFFFCFCFC),
-                    ),
+                padding: EdgeInsets.symmetric(horizontal: Dimens.gapWDp24),
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xFFF6F9F8), Colours.mainBgColor],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                   ),
-                  itemCount: banners.length,
-                  itemBuilder: (_, index) => BannerItem(
-                    imgUrl: banners[index].imgUrl,
-                    typeTitle: banners[index].titleType,
-                    titleBgColor: banners[index].titleBgColor,
+                ),
+                child: Container(
+                  height: 190.h,
+                  margin: EdgeInsets.symmetric(vertical: Dimens.gapHDp24 / 2),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimens.radiusH24 / 2),
+                  ),
+                  clipBehavior: Clip.hardEdge,
+                  child: Swiper(
+                    autoplay: true,
+                    pagination: SwiperPagination(
+                      margin: EdgeInsets.only(bottom: Dimens.gapHDp10),
+                      builder: DotSwiperPaginationBuilder(
+                        size: 10.h,
+                        activeSize: 10.h,
+                        color: const Color(0xFFCCCCCC),
+                        activeColor: const Color(0xFFFCFCFC),
+                      ),
+                    ),
+                    itemCount: banners.length,
+                    itemBuilder: (_, index) => BannerItem(
+                      imgUrl: banners[index].imgUrl,
+                      typeTitle: banners[index].titleType,
+                      titleBgColor: banners[index].titleBgColor,
+                    ),
                   ),
                 ),
               );
