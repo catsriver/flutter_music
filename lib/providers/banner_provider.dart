@@ -1,34 +1,30 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/banner.dart';
 
 class BannersNotifier extends StateNotifier<List<Banner>> {
-  BannersNotifier()
-      : super(
-          [
-            Banner(
-              imgUrl:
-                  'http://p1.music.126.net/5OlcZm8j5tCwo2MjtagGgg==/109951167834116990.jpg',
-              titleType: '热歌推荐',
-              titleColor: 'red',
-            ),
-            Banner(
-              imgUrl:
-                  'http://p1.music.126.net/AzgvM59T4sFImItakJ9tcg==/109951167836666177.jpg',
-              titleType: '新歌首发',
-              titleColor: 'red',
-            ),
-            Banner(
-              imgUrl:
-                  'http://p1.music.126.net/2qqETBwgfB7rdE3V7pYiDw==/109951167836682836.jpg',
-              titleType: '新歌首发',
-              titleColor: 'red',
-            ),
-          ],
-        );
+  BannersNotifier() : super([]);
 
   void addBanner(Banner banner) {
     state = [...state, banner];
+  }
+
+  Future<void> fetchAndSetBanners() async {
+    const url = 'http://47.108.129.252:3000/banner';
+
+    try {
+      final response = await Dio().get(url, queryParameters: {
+        'type': 1,
+      });
+      final extractedData = response.data['banners'];
+
+      for (var banner in extractedData) {
+        addBanner(Banner.fromJson(banner));
+      }
+    } catch (err) {
+      rethrow;
+    }
   }
 }
 

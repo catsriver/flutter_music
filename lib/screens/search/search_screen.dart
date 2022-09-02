@@ -10,8 +10,19 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../widgets/common/search_box.dart';
 import '../../widgets/custom_app_bar/custom_app_bar.dart';
 
-class SearchScreen extends StatelessWidget {
+class SearchScreen extends ConsumerStatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
+
+  @override
+  ConsumerState<SearchScreen> createState() => _SearchScreenState();
+}
+
+class _SearchScreenState extends ConsumerState<SearchScreen> {
+  @override
+  void initState() {
+    ref.read(bannerProvider.notifier).fetchAndSetBanners();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +48,6 @@ class SearchScreen extends StatelessWidget {
               return Container(
                 height: 190.h,
                 decoration: BoxDecoration(
-                  color: Colors.indigo,
                   borderRadius: BorderRadius.circular(Dimens.radiusH24 / 2),
                 ),
                 clipBehavior: Clip.hardEdge,

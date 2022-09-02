@@ -27,14 +27,14 @@ class Banner {
   }
 
   factory Banner.fromJson(Map<String, dynamic> json) => Banner(
-        imgUrl: json["imgUrl"],
-        titleType: json["titleType"],
-        titleColor: json['titleColor'],
+        imgUrl: json["pic"] ?? '',
+        titleType: json["typeTitle"] ?? '',
+        titleColor: json['titleColor'] ?? '',
       );
 
   Map<String, dynamic> toJson() => {
         "imgUrl": imgUrl,
         "titleType": titleType,
-        "titleBgColor": titleColor,
+        "titleBgColor": titleBgColor,
       };
 }
