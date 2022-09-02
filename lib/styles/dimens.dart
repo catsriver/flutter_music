@@ -14,6 +14,7 @@ class Dimens {
   static final fontSp28 = 28.sp;
   // 间距
   static final gapWDp5 = 5.w;
+  static final gapHDp5 = 5.h;
 
   static final gapWDp10 = 10.w;
   static final gapHDp10 = 10.h;
@@ -25,6 +26,7 @@ class Dimens {
   static final gapHDp24 = 24.h;
 
   static final gapWDp30 = 30.w;
+  static final gapHDp30 = 30.w;
 
   // 圆角
   static final radiusH24 = 24.h;

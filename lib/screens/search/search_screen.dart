@@ -9,6 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../widgets/common/search_box.dart';
 import '../../widgets/custom_app_bar/custom_app_bar.dart';
+import './widgets/menu_item.dart' as item;
 
 class SearchScreen extends ConsumerStatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -72,6 +73,24 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 ),
               );
             },
+          ),
+
+          // 圆形图标
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: Dimens.gapWDp24 / 2),
+              child: Row(
+                children: [
+                  for (int i = 0; i < 10; i++)
+                    const item.MenuItem(
+                      name: '每日推荐',
+                      iconUrl:
+                          'http://p1.music.126.net/4DpSgAVpJny4Ewf-Xw_WQQ==/109951163986641971.jpg',
+                    ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
