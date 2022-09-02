@@ -18,10 +18,13 @@ class BannersNotifier extends StateNotifier<List<Banner>> {
         'type': 1,
       });
       final extractedData = response.data['banners'];
+      final List<Banner> loadedBanners = [];
 
       for (var banner in extractedData) {
-        addBanner(Banner.fromJson(banner));
+        loadedBanners.add(Banner.fromJson(banner));
       }
+
+      state = loadedBanners;
     } catch (err) {
       rethrow;
     }
