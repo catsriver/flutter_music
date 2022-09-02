@@ -16,9 +16,9 @@ class Menu {
   final String url;
 
   factory Menu.fromJson(Map<String, dynamic> json) => Menu(
-        iconUrl: json["iconUrl"],
-        name: json["name"],
-        url: json["url"],
+        iconUrl: json["iconUrl"] ?? '',
+        name: json["name"] ?? '',
+        url: json["url"] ?? '',
       );
 
   Map<String, dynamic> toJson() => {

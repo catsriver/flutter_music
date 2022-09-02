@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:card_swiper/card_swiper.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_music/providers/banner_provider.dart';
 import 'package:flutter_music/providers/menu_provider.dart';
@@ -23,6 +26,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
   @override
   void initState() {
     ref.read(bannerProvider.notifier).fetchAndSetBanners();
+    ref.read(menuProvider.notifier).fetchAndSetMenus();
     super.initState();
   }
 
@@ -87,7 +91,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
             },
           ),
 
-          // 圆形图标
+          // 圆形图标列表
           Container(
             padding: EdgeInsets.only(
               top: Dimens.gapHDp14,
@@ -115,6 +119,21 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        const url =
+            'https://flutter-music-catsriver-default-rtdb.firebaseio.com/menus.json';
+
+        Dio().post(
+          url,
+          data: json.encode({
+            'id': 19000,
+            'name': '歌房',
+            'iconUrl':
+                'http://p1.music.126.net/JrloH3aCTYMLeXAYCMAc1g==/109951166989047614.jpg',
+            'url': 'orpheus://nk/ktvroom/detail?needReturnHome=1&id=6931212',
+          }),
+        );
+      }),
     );
   }
 }
