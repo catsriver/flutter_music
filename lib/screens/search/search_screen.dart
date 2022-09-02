@@ -1,6 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_music/providers/banner_provider.dart';
+import 'package:flutter_music/providers/menu_provider.dart';
 import 'package:flutter_music/screens/search/widgets/banner_item.dart';
 import 'package:flutter_music/styles/styles.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -27,6 +28,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final menus = ref.watch(menuProvider);
+
     return Scaffold(
       appBar: CustomAppBar(
         middle: SearchBox(
@@ -81,14 +84,14 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: Dimens.gapWDp24 / 2),
               child: Row(
-                children: [
-                  for (int i = 0; i < 10; i++)
-                    const item.MenuItem(
-                      name: '每日推荐',
-                      iconUrl:
-                          'http://p1.music.126.net/4DpSgAVpJny4Ewf-Xw_WQQ==/109951163986641971.jpg',
-                    ),
-                ],
+                children: menus
+                    .map(
+                      (menu) => item.MenuItem(
+                        iconUrl: menu.iconUrl,
+                        name: menu.name,
+                      ),
+                    )
+                    .toList(),
               ),
             ),
           ),
