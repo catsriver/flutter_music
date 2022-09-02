@@ -41,6 +41,8 @@ dependencies:
     flutter_svg: ^1.1.4
     # 状态管理
     flutter_riverpod: ^1.0.4
+    # 轮播图
+    card_swiper: ^2.0.4
 
 dev_dependencies:
     flutter_test:
