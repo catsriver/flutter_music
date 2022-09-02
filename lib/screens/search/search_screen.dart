@@ -39,7 +39,6 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: Dimens.gapWDp24),
         children: [
           // Banner
           Consumer(
@@ -47,6 +46,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
               final banners = ref.watch(bannerProvider);
               return Container(
                 height: 190.h,
+                margin: EdgeInsets.symmetric(
+                    horizontal: Dimens.gapWDp24, vertical: Dimens.gapHDp24 / 2),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(Dimens.radiusH24 / 2),
                 ),
