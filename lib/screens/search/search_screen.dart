@@ -1,7 +1,4 @@
-import 'dart:convert';
-
 import 'package:card_swiper/card_swiper.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_music/providers/banner_provider.dart';
 import 'package:flutter_music/providers/menu_provider.dart';
@@ -105,35 +102,23 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
             ),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                children: menus
-                    .map(
-                      (menu) => item.MenuItem(
-                        iconUrl: menu.iconUrl,
-                        name: menu.name,
-                      ),
-                    )
-                    .toList(),
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: Dimens.gapWDp24 / 2),
+                child: Row(
+                  children: menus
+                      .map(
+                        (menu) => item.MenuItem(
+                          iconUrl: menu.iconUrl,
+                          name: menu.name,
+                        ),
+                      )
+                      .toList(),
+                ),
               ),
             ),
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        const url =
-            'https://flutter-music-catsriver-default-rtdb.firebaseio.com/menus.json';
-
-        Dio().post(
-          url,
-          data: json.encode({
-            'id': 19000,
-            'name': '歌房',
-            'iconUrl':
-                'http://p1.music.126.net/JrloH3aCTYMLeXAYCMAc1g==/109951166989047614.jpg',
-            'url': 'orpheus://nk/ktvroom/detail?needReturnHome=1&id=6931212',
-          }),
-        );
-      }),
     );
   }
 }
