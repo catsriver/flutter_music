@@ -16,16 +16,7 @@ class MenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
-        top: Dimens.gapHDp14,
-        bottom: Dimens.gapHDp30,
-      ),
       margin: EdgeInsets.symmetric(horizontal: Dimens.gapWDp24 / 2),
-      decoration: const BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: Colours.dividerColor),
-        ),
-      ),
       child: Column(
         children: [
           Container(

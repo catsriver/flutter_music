@@ -79,10 +79,19 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
           ),
 
           // 圆形图标
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: Dimens.gapWDp24 / 2),
+          Container(
+            padding: EdgeInsets.only(
+              top: Dimens.gapHDp14,
+              bottom: Dimens.gapHDp30,
+            ),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(color: Color(0xFFE5E5E5)),
+              ),
+              color: Colours.mainBgColor,
+            ),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
                 children: menus
                     .map(
