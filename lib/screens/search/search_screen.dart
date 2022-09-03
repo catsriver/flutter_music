@@ -1,16 +1,18 @@
-import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_music/providers/banner_provider.dart';
-import 'package:flutter_music/providers/menu_provider.dart';
-import 'package:flutter_music/screens/search/widgets/banner_item.dart';
-import 'package:flutter_music/styles/styles.dart';
+import 'package:card_swiper/card_swiper.dart';
+import 'package:flutter_music/screens/search/widgets/playlist_item.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../providers/banner_provider.dart';
+import '../../providers/menu_provider.dart';
+import '../../styles/styles.dart';
 import '../../widgets/common/search_box.dart';
 import '../../widgets/custom_app_bar/custom_app_bar.dart';
 import './widgets/menu_item.dart' as item;
+import './widgets/block_container.dart';
+import './widgets/banner_item.dart';
 
 class SearchScreen extends ConsumerStatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -116,6 +118,44 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 ),
               ),
             ),
+          ),
+
+          // 推荐歌单
+          const BlockContainer(
+            blockName: '推荐歌单',
+            buttonName: '更多',
+            children: [
+              PlayListItem(
+                mainTitle: '节奏感强的英文歌[抓耳的旅律不断响起]',
+                imageUrl:
+                    'http://p1.music.126.net/uQDhstSz9DIRhhDw2NJQIg==/109951164383196102.jpg',
+                playCount: 1231312,
+              ),
+              PlayListItem(
+                mainTitle: '节奏感强的英文歌[抓耳的旅律不断响起]',
+                imageUrl:
+                    'http://p1.music.126.net/bplI-mIjuvbo7ZhxM1bzXw==/109951165496126250.jpg',
+                playCount: 1231312,
+              ),
+              PlayListItem(
+                mainTitle: '节奏感强的英文歌[抓耳的旅律不断响起]',
+                imageUrl:
+                    'http://p1.music.126.net/uQDhstSz9DIRhhDw2NJQIg==/109951164383196102.jpg',
+                playCount: 1231312,
+              ),
+              PlayListItem(
+                mainTitle: '节奏感强的英文歌[抓耳的旅律不断响起]',
+                imageUrl:
+                    'http://p1.music.126.net/uQDhstSz9DIRhhDw2NJQIg==/109951164383196102.jpg',
+                playCount: 1231312,
+              ),
+              PlayListItem(
+                mainTitle: '节奏感强的英文歌[抓耳的旅律不断响起]',
+                imageUrl:
+                    'http://p1.music.126.net/uQDhstSz9DIRhhDw2NJQIg==/109951164383196102.jpg',
+                playCount: 1231312,
+              ),
+            ],
           ),
         ],
       ),
