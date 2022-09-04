@@ -14,6 +14,7 @@ class Colours {
   static const fontColor1 = Color(0xFF252933);
   static const fontColor2 = Color(0xFF8A919F);
   static const fontColor3 = Color(0xFFC2C8D1);
+  static const fontColorWhite = Color(0xFFFFFFFF);
 
   // 边框
   static const borderColor = Color(0xFFE5E6EB);
